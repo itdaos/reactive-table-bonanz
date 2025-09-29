@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import { ReactiveTableContext, ReactiveTableDispatchContext } from "../reactive-table-state/reactive-table-context";
-import ReactiveTableCell from "./ReactiveTableCell";
+import { ReactiveTableContext } from "../reactive-table-state/reactive-table-context";
 import ReactiveTableRow from "./ReactiveTableRow";
 
 function get60thPercentile(arr: number[]) {

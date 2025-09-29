@@ -25,7 +25,7 @@ function generateTableData(M: number, N: number): Cell[][] {
     return tableData;
 }
 
-export function reactiveTableReducer(state: ReactiveTableContextType, action) {
+export function reactiveTableReducer(state: ReactiveTableContextType, action: any) {
     const actionMapper: Record<string, StateTransformer> = {
         'set_rows': (state) => {
             return {
@@ -73,7 +73,7 @@ export function reactiveTableReducer(state: ReactiveTableContextType, action) {
             return {
                 ...state,
                 M: state.M - 1,
-                tableContent: state.tableContent.filter((row, idx) => idx !== action.payload.idx)
+                tableContent: state.tableContent.filter((_, idx) => idx !== action.payload.idx)
             }
         },
         'append_row': (state) => {
